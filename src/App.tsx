@@ -1,28 +1,15 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Logo } from "./components/logo";
+
+gsap.registerPlugin(useGSAP);
+
 export const App = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "calc(100dvh - 47px)",
-        width: "calc(100dvw - 24px)",
-        margin: 0,
-        padding: 8,
-      }}
-    >
-      <h2>Projeto de exemplo usando PWA</h2>
-      <p style={{ textAlign: "center" }}>
-        Essa aplicação funciona como aplicativo Desktop e Mobile (Android e
-        IOS), e foi criada com{" "}
-        <span style={{ fontWeight: "bold" }}>ReactJS</span>
-      </p>
-      <p style={{ textAlign: "center" }}>
-        Isso é possível, pois, PWA (Progressive Web Applciation) é um tecnologia
-        inovadora que tem o potencial tranformar uma aplicação para
-        multiplatafroma, mas isso sem precisar escrever ela de novo!
-      </p>
+    <div className="flex h-dvh bg-gray-800 text-white">
+      <div className="flex justify-center items-center w-full">
+        <Logo />
+      </div>
     </div>
   );
 };
